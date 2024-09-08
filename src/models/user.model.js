@@ -4,7 +4,7 @@
 const { DataTypes, Model, Op } = require('sequelize');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
-const sequelize = require('../sequelize'); // Assuming you've configured Sequelize instance
+const sequelize = require('../config/sequelize'); // Assuming you've configured Sequelize instance
 const { roles } = require('../config/roles');
 
 class User extends Model { 

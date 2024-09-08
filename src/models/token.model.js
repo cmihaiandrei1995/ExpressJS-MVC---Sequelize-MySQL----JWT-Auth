@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { toJSON } = require('./plugins');
 const { tokenTypes } = require('../config/tokens');
-const sequelize = require('../sequelize');
+const sequelize = require('../config/sequelize');
 
 const Token = sequelize.define(
     'Token',

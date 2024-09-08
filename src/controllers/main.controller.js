@@ -1,5 +1,5 @@
 const controller = require('./controller');
-const _user = require('../models/user');
+const userService = require('../services/user.service');
 
 class MainController extends controller {
 
@@ -15,7 +15,7 @@ class MainController extends controller {
      */
     static async createUser(req, res) {
         try {
-            const user = await _user.createUser();
+            const user = await userService.createUser();
 
             res.json(user);
 
@@ -30,7 +30,7 @@ class MainController extends controller {
      */
     static async getUsers(req, res) {
         try {
-            const users = await _user.getAllUsers();
+            const users = await userService.getAllUsers();
             res.json(users);
         } catch (_error) {
             console.log(_error);
@@ -45,7 +45,7 @@ class MainController extends controller {
         try {
             const id = req.params.id;
 
-            const user = await _user.getById(id);
+            const user = await userService.getById(id);
 
             return res.json(user);
         } catch (_error) {

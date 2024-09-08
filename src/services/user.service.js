@@ -28,13 +28,17 @@ const queryUsers = async (filter, options) => {
   return users;
 };
 
+const getAllUsers = async() => {
+  return await User.findAll();
+};
+
 /**
  * Get user by id
  * @param {ObjectId} id
  * @returns {Promise<User>}
  */
 const getUserById = async (id) => {
-  return User.findById(id);
+  return await User.findByPk(id);
 };
 
 /**
@@ -80,6 +84,7 @@ const deleteUserById = async (userId) => {
 };
 
 module.exports = {
+  getAllUsers,
   createUser,
   queryUsers,
   getUserById,

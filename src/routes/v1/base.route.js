@@ -9,9 +9,7 @@ const router = express.Router();
 /**
  * router.get('/path', middlewares, controller.method);
  */
-router.get('/', mainController.getUsers);
-router.get('/users', mainController.getUsers);
-router.get('/users/create', mainController.createUser);
-router.get('/users/:id', mainController.getUserById);
+router.post('/create', mainController.createUser);
+router.get('/:id', mainController.getUserById);
 
 module.exports = router;

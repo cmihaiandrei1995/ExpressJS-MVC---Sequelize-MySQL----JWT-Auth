@@ -45,7 +45,7 @@ class MainController extends controller {
         try {
             const id = req.params.id;
 
-            const user = await userService.getById(id);
+            const user = await userService.getUserById(id);
 
             return res.json(user);
         } catch (_error) {

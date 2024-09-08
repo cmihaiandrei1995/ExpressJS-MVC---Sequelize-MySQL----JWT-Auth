@@ -1,1 +1,1 @@
-<h1>Hello</h1>
+<h1>ExpressJS MVC + Sequelize + JWT Auth</h1>
